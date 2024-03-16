@@ -20,3 +20,6 @@ export const siteConfig = {
     author: "https://abhijayrajvansh.com"
   }
 }
+
+
+// MONGODB_URL=mongodb+srv://abhijayrajvansh:Vt3Hs8iHA8lLwQJx@meetup-cluster.ddsctdf.mongodb.net/?retryWrites=true&w=majority&appName=meetup-cluster
