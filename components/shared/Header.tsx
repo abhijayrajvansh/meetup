@@ -2,6 +2,7 @@ import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Navigationbar from "./Navigationbar";
+import MobileNavigation from "./MobileNavigation";
 
 const Header = () => {
   return (
@@ -15,16 +16,19 @@ const Header = () => {
         
         {/* navigationbar */}
         <SignedIn>
-          <Navigationbar />
+          <nav className="hidden md:flex bred max-w-sm">
+            <Navigationbar  />
+          </nav>
         </SignedIn>
-
 
 
         {/* user profile and login/logout */}
         <div className="flex items-center w-32 justify-end gap-3">
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
-            <Navigationbar />
+            <nav className="md:hidden">
+              <MobileNavigation />
+            </nav>
           </SignedIn>
 
           <SignedOut>
