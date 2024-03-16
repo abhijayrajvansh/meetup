@@ -3,15 +3,17 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import Navigationbar from "./Navigationbar";
 import MobileNavigation from "./MobileNavigation";
+import Image from "next/image";
 
 
 const Header = () => {
   return (
-    <header className="w-full border-b transition-all">
+    <header className="w-full shadow-xl border-b border-gray-700 bg-gray-900 text-white">
       <div className="wrapper flex items-center justify-between">
         
-        <Link href={'/'} className="w-36">
-          <h1 className="text-3xl sm:font-semibold text-red-500 font-bold">meetup!</h1>
+        <Link href={'/'} className="w-36 flex items-center gap-2">
+          <Image width={38} height={38} src="/images/logo.png" alt="meetup-logo" />
+          <h1 className="text-3xl sm:font-semibold text-white font-semibold">meetup!</h1>
         </Link>
 
         

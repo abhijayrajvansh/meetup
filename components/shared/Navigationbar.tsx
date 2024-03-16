@@ -10,7 +10,7 @@ const Navigationbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="md:flex flex flex-col gap-5 md:gap-10 md:flex-row w-full">
+    <div className="md:flex  flex flex-col gap-5 md:gap-10 md:flex-row w-full">
       {
         headerLinks.map((link) => {
           
@@ -18,8 +18,10 @@ const Navigationbar = () => {
           
           return (
             <li key={link.route}
-              className={`${isActive && 'text-primary'} flex-center p-medium-16 whitespace-nowrap`}>
-              <Link href={link.route}>{link.label}</Link>
+              className={`${isActive && 'text-primary font-bold md:font-semibold'} flex-center`}>
+              <Link href={link.route} className="text-xl sm:text-[18px]">
+                {link.label}
+              </Link>
             </li>
           )
         })

@@ -12,3 +12,11 @@ export const headerLinks = [
     route: '/profile',
   },
 ]
+
+export type SiteConfig = typeof siteConfig;
+
+export const siteConfig = {
+  links: {
+    author: "https://abhijayrajvansh.com"
+  }
+}
