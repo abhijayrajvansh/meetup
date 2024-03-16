@@ -1,6 +1,7 @@
-import { SignedOut } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import Navigationbar from "./Navigationbar";
 
 const Header = () => {
   return (
@@ -12,13 +13,19 @@ const Header = () => {
 
         <div className="flex w-32 justify-end gap-3">
 
-          <SignedOut>
-            <Button asChild size='lg' variant='destructive'>
-              <Link href="/signin">
-                Log in
-              </Link>
-            </Button>
-          </SignedOut>
+        <SignedIn>
+          <UserButton afterSignOutUrl="/" />
+          <Navigationbar />
+        </SignedIn>
+
+        <SignedOut>
+          <Button asChild size='lg' variant='destructive'>
+            <Link href="/signin">
+              Log in
+            </Link>
+          </Button>
+        </SignedOut>
+
 
         </div>
 
