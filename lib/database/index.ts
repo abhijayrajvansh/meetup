@@ -10,7 +10,7 @@ export const connectToDatabase = async () => {
   if (!MONGODB_URI) throw new Error("MONGODB_URL is missing...");
 
   cached.promise = cached.promise || mongoose.connect(MONGODB_URI, {
-    dbName: 'meetup',
+    dbName: 'meetup-cluster',
     bufferCommands: false,
   })
 
